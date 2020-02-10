@@ -23,12 +23,12 @@ public class TestCherchersGameModel0 {
 		System.out.println("c1 = " + c1);
 		System.out.println("c2 = " + c2);
 		System.out.println("c1.equals(c2) ? "+ c1.equals(c2));	// false
-		System.out.println("c1.equals(new Coord('a', 7)) ? "+ c1.equals(new Coord('a', 7)));	// true
-//		System.out.println("coord valides ('a',7) ? "+ Coord.coordonnees_valides(c1));		//true
-//		System.out.println("coord valides ('w',9) ? "+ Coord.coordonnees_valides(new Coord('w',9)));	//false
-//		System.out.println("coord valides ('b',11) ? "+ Coord.coordonnees_valides(new Coord('b',11) ));	//false
+		System.out.println("c1.equals(new Coord('a', 7)) ? "+ c1.equals(new Coord('a', 7)));	// il ne s'agit pas d'une copie
+		System.out.println("coord valides ('a',7) ? "+ Coord.coordonnees_valides(c1));		//true
+		System.out.println("coord valides ('w',9) ? "+ Coord.coordonnees_valides(new Coord('w',9)));	//false
+		System.out.println("coord valides ('b',11) ? "+ Coord.coordonnees_valides(new Coord('b',11) ));	//false
 //		System.out.println("c1.compareTo(c2) ? "+ c1.compareTo(c2) );	// c1 < c2
-//		System.out.println("c1.compareTo(new Coord('a', 7)) ? "+ c1.compareTo(new Coord('a', 7)) );	// coords égales
+//		System.out.println("c1.compareTo(new Coord('a', 7)) ? "+ c1.compareTo(new Coord('a', 7)) );	// coords ï¿½gales
 //
 //
 //		//////////////////////////////////
@@ -47,7 +47,7 @@ public class TestCherchersGameModel0 {
 //		pieceModel2.move(new Coord('c', 5));
 //		pieceModel3.move(new Coord('d', 6));
 //		System.out.println("isMoveOk ('c',5) --> ('e',7) = " + pieceModel2.isMoveOk(new Coord('e',7),true)); // true avec prise
-//		System.out.println("isMoveOk ('c',5) --> ('d',6) = " + pieceModel2.isMoveOk(new Coord('d',6),true)); // false occupé
+//		System.out.println("isMoveOk ('c',5) --> ('d',6) = " + pieceModel2.isMoveOk(new Coord('d',6),true)); // false occupï¿½
 //		System.out.println("isMoveOk ('c',5) --> ('b',6) = " + pieceModel2.isMoveOk(new Coord('b',6),true)); // false pas de 1 et pas obstacle
 //		System.out.println("isMoveOk ('d',4) --> ('f',6) = " + pieceModel2.isMoveOk(new Coord('f',6),false)); // false pas de 2 et pas obstacle
 //
