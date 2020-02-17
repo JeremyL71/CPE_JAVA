@@ -2,39 +2,86 @@ package atelier3IRC1.checkersGameGui;
 
 
 
+import atelier3IRC1.checkersGameModel.ModelConfig;
+import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
+
+
 import atelier3IRC1.checkersGameController.Controller;
 
 /**
  * @author francoise.perrin
- * 
- * Cette classe est la fen‡™tre du jeu de dames
- * Elle dÈlËgue a un objet la gestion de l'affichage du damier
- * 
+ *
+ * Cette classe est la fen√†¬™tre du jeu de dames
+ * Elle d√©l√®gue a un objet la gestion de l'affichage du damier
+ *
  */
 public class View extends GridPane {
-
+	static final int MAX = ModelConfig.LENGTH;
 	public View (Controller controller) {
 		super();
 
-		// le damier composÈ de carrÈs noirs et blancs
-		// sur lesquels sont positionnÈs des piËces noires ou blanches
+		// le damier compos√© de carr√©s noirs et blancs
+		// sur lesquels sont positionn√©s des pi√®ces noires ou blanches
 		Pane board = new Board(controller);
 
 		// gestion de la taille du damier
-		double height = GuiConfig.HEIGHT;			// TODO - ‡† remplacer (atelier 4) : bad practice
-		board.setPrefSize( height, height);			// TODO - ‡† remplacer (atelier 4) : bad practice
+		double height = GuiConfig.HEIGHT;			// TODO - √†¬† remplacer (atelier 4) : bad practice
+		board.setPrefSize( height, height);			// TODO - √†¬† remplacer (atelier 4) : bad practice
 
-		// crÈation d'un fond d'Ècran qui contiendra le damier + les axes (atelier 2)
-		BorderPane checkersBoard = new BorderPane();	
-		
-		// ajout du damier au centre du fond d'Ècran
+		// cr√©ation d'un fond d'√©cran qui contiendra le damier + les axes (atelier 2)
+		BorderPane checkersBoard = new BorderPane();
+
+		// ajout du damier au centre du fond d'√©cran
 		checkersBoard.setCenter(board);
-		
-		// ajout du fond d'Ècran ‡† la vue
+
+		//ajout d'une HBox et VBox
+		HBox hbox = generateHBox();
+		VBox vbox = generateVBox();
+
+		checkersBoard.setTop(hbox);
+		checkersBoard.setLeft(vbox);
+		// ajout du fond d'√©cran √†¬† la vue
 		this.add(checkersBoard, 0, 1);
+	}
+
+	private VBox generateVBox() {
+		VBox vbox = new VBox();
+		int i = MAX;
+
+		vbox.setSpacing(40);
+		while(i >= 1) {
+			vbox.getChildren().add(new Label(String.valueOf(i)));
+			i--;
+		}
+		return vbox;
+	}
+
+	private HBox generateHBox() {
+		HBox hbox = new HBox();
+		//g√©n√©ration de la HBox
+		hbox.getChildren().add(new Label(""));
+		int i = 0;
+		while(i < MAX) {
+			hbox.getChildren().add(new Label(String.valueOf((char) ('a' + i))));
+			hbox.setSpacing(50);
+			i++;
+		}
+
+		return hbox;
+	}
+
+	/**
+	 * g√©n√©ration des Labels
+	 * @param board board
+	 */
+	private void generationLabel(Pane board) {
+		// TODO Auto-generated method stub
+
 	}
 
 }
