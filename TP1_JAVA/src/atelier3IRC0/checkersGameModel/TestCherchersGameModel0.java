@@ -15,18 +15,18 @@ public class TestCherchersGameModel0 {
 		//////////////////////////////////
 		// Test classe Coord
 		//////////////////////////////////
-
-		System.out.println("Test classe Coord");
-		Coord c1 = new Coord('a', 7);
-		Coord c2 = new Coord('b', 3);
-		System.out.println("MAX = " + Coord.MAX);
-		System.out.println("c1 = " + c1);
-		System.out.println("c2 = " + c2);
-		System.out.println("c1.equals(c2) ? "+ c1.equals(c2));	// false
-		System.out.println("c1.equals(new Coord('a', 7)) ? "+ c1.equals(new Coord('a', 7)));	// il ne s'agit pas d'une copie
-		System.out.println("coord valides ('a',7) ? "+ Coord.coordonnees_valides(c1));		//true
-		System.out.println("coord valides ('w',9) ? "+ Coord.coordonnees_valides(new Coord('w',9)));	//false
-		System.out.println("coord valides ('b',11) ? "+ Coord.coordonnees_valides(new Coord('b',11) ));	//false
+//
+//		System.out.println("Test classe Coord");
+//		Coord c1 = new Coord('a', 7);
+//		Coord c2 = new Coord('b', 3);
+//		System.out.println("MAX = " + Coord.MAX);
+//		System.out.println("c1 = " + c1);
+//		System.out.println("c2 = " + c2);
+//		System.out.println("c1.equals(c2) ? "+ c1.equals(c2));	// false
+//		System.out.println("c1.equals(new Coord('a', 7)) ? "+ c1.equals(new Coord('a', 7)));	// il ne s'agit pas d'une copie
+//		System.out.println("coord valides ('a',7) ? "+ Coord.coordonnees_valides(c1));		//true
+//		System.out.println("coord valides ('w',9) ? "+ Coord.coordonnees_valides(new Coord('w',9)));	//false
+//		System.out.println("coord valides ('b',11) ? "+ Coord.coordonnees_valides(new Coord('b',11) ));	//false
 //		System.out.println("c1.compareTo(c2) ? "+ c1.compareTo(c2) );	// c1 < c2
 //		System.out.println("c1.compareTo(new Coord('a', 7)) ? "+ c1.compareTo(new Coord('a', 7)) );	// coords �gales
 //
@@ -56,10 +56,10 @@ public class TestCherchersGameModel0 {
 //		// Test classe ModelImplementor
 //		//////////////////////////////////
 //
-//		System.out.println("\nTest classe ModelImplementor");
-//		ModelImplementor modelImpl = new ModelImplementor();
-//		System.out.println("findPieceModel ('b',4) = " + modelImpl.findPiece(new Coord('b',4)));	// OK
-//		System.out.println("findPieceModel ('b',6) = " + modelImpl.findPiece(new Coord('b',6)));	// KO
+		System.out.println("\nTest classe ModelImplementor");
+		ModelImplementor modelImpl = new ModelImplementor();
+		System.out.println("findPieceModel ('b',4) = " + modelImpl.findPiece(new Coord('b',4)));	// OK
+		System.out.println("findPieceModel ('b',6) = " + modelImpl.findPiece(new Coord('b',6)));	// KO
 //		System.out.println("getPieceColor('b',4) = " + modelImpl.getPieceColor(new Coord('b',4)));	// WHITE
 //		System.out.println("getPieceColor('b',6) = " + modelImpl.getPieceColor(new Coord('b',6)));	// KO
 //		System.out.println("isPiecehere('b',4) = " + modelImpl.isPiecehere(new Coord('b',4)));	// true 

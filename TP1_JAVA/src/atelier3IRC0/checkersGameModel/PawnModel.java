@@ -11,43 +11,52 @@ public class PawnModel implements PieceModel {
 	
 	public PawnModel(Coord coord, PieceSquareColor pieceColor) {
 		super();
-		
-		// ToDo 
-		
+		this.coord = coord;
+		this.pieceColor = pieceColor;
 	}
 
 	@Override
 	public Coord getCoord() {
-		Coord ret = null;
-
-		// ToDo 
-		
-		return ret;
+		return this.coord;
 	}
 
 	@Override
+	// Setteur
 	public void move(Coord coord) {
-
-		// ToDo 
-		
+		this.coord = coord;
 	}
 
 	@Override
 	public PieceSquareColor getPieceColor() {
-		PieceSquareColor ret = null;
-
-		// ToDo 
-		
-		return ret;
+		return pieceColor;
 	}
 
 	@Override
 	public boolean isMoveOk(Coord targetCoord, boolean isPieceToTake) {
-		boolean ret = false;
-
-		// ToDo 
-		
-		return ret;
+		int forward;
+		//Déplacement avec prise
+		if (isPieceToTake == false)
+			forward = 1;
+		else
+			forward = 2 ;
+		pieceColor = getPieceColor();
+		if (pieceColor == PieceSquareColor.WHITE)
+		{
+			// POUR LES BLANCS
+			if(targetCoord.getLigne() == this.coord.getLigne()+forward && (targetCoord.getColonne() == ( this.coord.getColonne()+forward) || targetCoord.getColonne() == ( this.coord.getColonne()-forward)))
+			{
+				return true;
+			}
+		}
+		else
+		{
+			// POUR LES NOIRS
+			if(targetCoord.getLigne() == this.coord.getLigne()-forward && (targetCoord.getColonne() == ( this.coord.getColonne()+forward) || targetCoord.getColonne() == ( this.coord.getColonne()-forward)))
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 
 	@Override
