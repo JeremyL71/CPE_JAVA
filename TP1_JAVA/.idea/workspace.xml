@@ -2,7 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ddf5451-8e92-41de-bcf9-fe670a25016c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/atelier3IRC2/checkersGameModel/AbstractPieceModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TP1_JAVA/atelier3IRC1/checkersGameController/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TP1_JAVA/atelier3IRC1/checkersGameGui/Board$PieceListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TP1_JAVA/atelier3IRC1/checkersGameGui/Board$SquareListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TP1_JAVA/atelier3IRC1/checkersGameGui/Board.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TP1_JAVA/atelier3IRC1/checkersGameGui/GuiConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TP1_JAVA/atelier3IRC1/checkersGameGui/PieceGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TP1_JAVA/atelier3IRC1/checkersGameGui/PieceShape.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TP1_JAVA/atelier3IRC1/checkersGameGui/SquareGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TP1_JAVA/atelier3IRC1/checkersGameGui/View.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TP1_JAVA/atelier3IRC1/checkersGameLauncher/LauncherAtelier3IRC1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TP1_JAVA/atelier3IRC1/checkersGameModel/Coord.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TP1_JAVA/atelier3IRC1/checkersGameModel/Model.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TP1_JAVA/atelier3IRC1/checkersGameModel/ModelConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TP1_JAVA/atelier3IRC1/checkersGameModel/ModelImplementor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TP1_JAVA/atelier3IRC1/checkersGameModel/PawnModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TP1_JAVA/atelier3IRC1/checkersGameModel/PieceModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TP1_JAVA/atelier3IRC1/checkersGameModel/QueenModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TP1_JAVA/atelier3IRC1/checkersGameModel/TestCherchersGameModel1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TP1_JAVA/atelier3IRC1/checkersGameNutsAndBolts/PieceSquareColor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/atelier3IRC1/checkersGameController/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/atelier3IRC1/checkersGameGui/Board.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/atelier3IRC1/checkersGameGui/GuiConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/atelier3IRC1/checkersGameGui/PieceGUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/atelier3IRC1/checkersGameGui/PieceShape.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/atelier3IRC1/checkersGameGui/SquareGUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/atelier3IRC1/checkersGameGui/View.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/atelier3IRC1/checkersGameLauncher/LauncherAtelier3IRC1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/atelier3IRC1/checkersGameModel/Coord.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/atelier3IRC1/checkersGameModel/Model.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/atelier3IRC1/checkersGameModel/ModelConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/atelier3IRC1/checkersGameModel/ModelImplementor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/atelier3IRC1/checkersGameModel/PawnModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/atelier3IRC1/checkersGameModel/PieceModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/atelier3IRC1/checkersGameModel/QueenModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/atelier3IRC1/checkersGameModel/TestCherchersGameModel1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/atelier3IRC1/checkersGameNutsAndBolts/PieceSquareColor.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,15 +72,28 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/atelier3IRC1/checkersGameGui/boby.fxml" />
-    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
-  <component name="RunManager" selected="Application.LauncherAtelier3IRC1">
+  <component name="RunManager" selected="Application.LauncherAtelier3IRC2">
     <configuration name="LauncherAtelier3IRC1" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="atelier3IRC1.checkersGameLauncher.LauncherAtelier3IRC1" />
       <module name="TP1_JAVA" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="atelier3IRC0.checkersGameLauncher.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LauncherAtelier3IRC2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="atelier3IRC2.checkersGameLauncher.LauncherAtelier3IRC2" />
+      <module name="TP1_JAVA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="atelier3IRC2.checkersGameLauncher.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -64,12 +114,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestCherchersGameModel2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="atelier3IRC2.checkersGameModel.TestCherchersGameModel2" />
+      <module name="TP1_JAVA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="atelier3IRC2.checkersGameModel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.LauncherAtelier3IRC1" />
       <item itemvalue="Application.TestCherchersGameModel1" />
+      <item itemvalue="Application.TestCherchersGameModel2" />
+      <item itemvalue="Application.LauncherAtelier3IRC2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LauncherAtelier3IRC2" />
+        <item itemvalue="Application.TestCherchersGameModel2" />
         <item itemvalue="Application.TestCherchersGameModel1" />
       </list>
     </recent_temporary>
@@ -89,6 +156,10 @@
       <workItem from="1581935527620" duration="2091000" />
       <workItem from="1581942887475" duration="5509000" />
       <workItem from="1581949801312" duration="7711000" />
+      <workItem from="1585809126766" duration="3668000" />
+      <workItem from="1585820256015" duration="148000" />
+      <workItem from="1585820599993" duration="1831000" />
+      <workItem from="1585829070816" duration="5962000" />
     </task>
     <servers />
   </component>
@@ -96,42 +167,46 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="247" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581947086013">
+    <state x="247" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585820676943">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="247" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1581947086013" />
+    <state x="247" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1585820676943" />
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581956826404">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1581956826404" />
-    <state x="549" y="155" key="FileChooserDialogImpl" timestamp="1581954580146">
+    <state x="385" y="0" key="CommitChangelistDialog2" timestamp="1585834685054">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="155" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1581954580146" />
-    <state width="1493" height="165" key="GridCell.Tab.0.bottom" timestamp="1582029673076">
+    <state x="385" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585834685054" />
+    <state x="549" y="155" key="FileChooserDialogImpl" timestamp="1585810606224">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="165" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582029673076" />
-    <state width="1493" height="165" key="GridCell.Tab.0.center" timestamp="1582029673076">
+    <state x="549" y="155" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585810606224" />
+    <state width="1493" height="170" key="GridCell.Tab.0.bottom" timestamp="1585835068565">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="165" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1582029673076" />
-    <state width="1493" height="165" key="GridCell.Tab.0.left" timestamp="1582029673076">
+    <state width="1493" height="170" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585835068565" />
+    <state width="1493" height="170" key="GridCell.Tab.0.center" timestamp="1585835068565">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="165" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1582029673076" />
-    <state width="1493" height="165" key="GridCell.Tab.0.right" timestamp="1582029673076">
+    <state width="1493" height="170" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585835068565" />
+    <state width="1493" height="170" key="GridCell.Tab.0.left" timestamp="1585835068565">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="165" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1582029673076" />
-    <state x="288" y="112" key="SettingsEditor" timestamp="1581954581226">
+    <state width="1493" height="170" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585835068565" />
+    <state width="1493" height="170" key="GridCell.Tab.0.right" timestamp="1585835068565">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="288" y="112" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1581954581226" />
-    <state x="465" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1581949809257">
+    <state width="1493" height="170" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585835068565" />
+    <state x="312" y="122" width="981" height="707" key="SettingsEditor" timestamp="1585834769315">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1581949809257" />
+    <state x="312" y="122" width="981" height="707" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1585834769315" />
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1585820600503">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585820600503" />
     <state x="462" y="10" width="631" height="804" key="find.popup" timestamp="1581956878495">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -144,9 +219,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1581346810229" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1581343335657">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1585829773132">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1581343335657" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1585829773132" />
   </component>
 </project>
