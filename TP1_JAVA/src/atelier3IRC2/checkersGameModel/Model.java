@@ -8,20 +8,20 @@ import atelier3IRC2.checkersGameNutsAndBolts.PieceSquareColor;
 /**
  * @author francoise.perrin
  *
- * Cette classe gère les aspects métiers du jeu de dame
- * indépendement de toute vue
+ * Cette classe gï¿½re les aspects mï¿½tiers du jeu de dame
+ * indï¿½pendement de toute vue
  * 
- * Elle délègue à son objet ModelImplementor 
+ * Elle dï¿½lï¿½gue ï¿½ son objet ModelImplementor 
  * le stockage des PieceModel dans une collection
  * 
- * Les pièces sont capables de se déplacer d'une case en diagonale 
+ * Les piï¿½ces sont capables de se dï¿½placer d'une case en diagonale 
  * si la case de destination est vide
- * ou de 2 cases en diagonale s'il existe une pièce
- * du jeu opposé à  prendre sur le trajet
+ * ou de 2 cases en diagonale s'il existe une piï¿½ce
+ * du jeu opposï¿½ ï¿½ prendre sur le trajet
  * 
- * Ne sont pas gérés les rafles, les dames, 
+ * Ne sont pas gï¿½rï¿½s les rafles, les dames, 
  * ni le fait que lorsqu'une prise est possible
- * une autre pièce ne doit pas être jouée
+ * une autre piï¿½ce ne doit pas ï¿½tre jouï¿½e
  * 
  */
 public class Model  {
@@ -29,8 +29,8 @@ public class Model  {
 	private PieceSquareColor currentColor;	// couleur du joueur courant
 
 	private ModelImplementor implementor = null;
-	private boolean isPieceToMove;			// pièce à  déplacer
-	private Coord pieceToTakeCoord;			// Coordonnées pièce à prendre à retourner à la vue
+	private boolean isPieceToMove;			// piï¿½ce ï¿½ dï¿½placer
+	private Coord pieceToTakeCoord;			// Coordonnï¿½es piï¿½ce ï¿½ prendre ï¿½ retourner ï¿½ la vue
 
 	public Model() {
 		super();
@@ -41,7 +41,7 @@ public class Model  {
 
 	/**
 	 * @param coord
-	 * @return true si la PieceModel qui se trouve aux coordonnées indiquées 
+	 * @return true si la PieceModel qui se trouve aux coordonnï¿½es indiquï¿½es 
 	 * est de la couleur du joueur courant 
 	 */
 	public boolean isPieceMoveable(Coord coord) {
@@ -57,10 +57,10 @@ public class Model  {
 	/**
 	 * @param initCoord
 	 * @param targetCoord
-	 * @return true si le déplacement est légal
+	 * @return true si le dï¿½placement est lï¿½gal
 	 * (s'effectue en diagonale, avec ou sans prise)
-	 * La PieceModel qui se trouve aux coordonnées passées en paramètre 
-	 * est capable de répondre à  cette question (par l'intermédiare du ModelImplementor)
+	 * La PieceModel qui se trouve aux coordonnï¿½es passï¿½es en paramï¿½tre 
+	 * est capable de rï¿½pondre ï¿½ cette question (par l'intermï¿½diare du ModelImplementor)
 	 * 
 	 */
 	public boolean isMovePieceOk(Coord initCoord, Coord targetCoord) {
@@ -70,16 +70,16 @@ public class Model  {
 		this.isPieceToMove = false;
 		this.pieceToTakeCoord = null;
 
-		// s'il existe une pièce à  déplacer, 
-		// et que case d'arrivée est inoccupée et dans les limites du damier
+		// s'il existe une piï¿½ce ï¿½ dï¿½placer, 
+		// et que case d'arrivï¿½e est inoccupï¿½e et dans les limites du damier
 		if(this.implementor.isPiecehere(initCoord) &&
 				Coord.coordonnees_valides(targetCoord) &&
 				!this.implementor.isPiecehere(targetCoord)) {
 
 
-			// on récupère la liste des coordonnées des cases sur la trajectoire
-			// s'il n'existe qu'1 seule pièce à prendre d'une autre couleur sur la trajectoire
-			// ou qu'il n'existe pas de pièce à prendre, alors, on teste si le déplacement est légal
+			// on rï¿½cupï¿½re la liste des coordonnï¿½es des cases sur la trajectoire
+			// s'il n'existe qu'1 seule piï¿½ce ï¿½ prendre d'une autre couleur sur la trajectoire
+			// ou qu'il n'existe pas de piï¿½ce ï¿½ prendre, alors, on teste si le dï¿½placement est lï¿½gal
 			
 			boolean isPieceTotake = false;
 			List<Coord> coordsOnItinerary = this.implementor.getCoordsOnItinerary(initCoord, targetCoord);
@@ -91,7 +91,7 @@ public class Model  {
 					isMovePossible = true;
 					isPieceTotake = false; 
 				}
-				// il existe des cases vides ou occupées sur la trajectoire
+				// il existe des cases vides ou occupï¿½es sur la trajectoire
 				else { 
 					int count = 0;
 					Coord potentialPieceToTakeCoord = null;
@@ -116,8 +116,8 @@ public class Model  {
 				}
 			}
 
-			// Vérif si déplacement en diagonale est possible avec le bon pas en fonction
-			// de s'il y a 1 pièce à prendre ou pas
+			// Vï¿½rif si dï¿½placement en diagonale est possible avec le bon pas en fonction
+			// de s'il y a 1 piï¿½ce ï¿½ prendre ou pas
 			if (isMovePossible) { 
 				isMovePossible = this.implementor.isMovePieceOk(initCoord, targetCoord, isPieceTotake ) ;
 			}
@@ -130,19 +130,19 @@ public class Model  {
 	/**
 	 * @param initCoord
 	 * @param targetCoord
-	 * @returnles coordonnées de la pièce qui a éventuellement été prise 
+	 * @returnles coordonnï¿½es de la piï¿½ce qui a ï¿½ventuellement ï¿½tï¿½ prise 
 	 */
 	public Coord movePiece(Coord initCoord, Coord targetCoord) {
 
 		Coord tookPieceCoord = null;
 
-		// si le déplacement est légal
+		// si le dï¿½placement est lï¿½gal
 		if (this.isPieceToMove) {
 
-			// déplacement effectif de la pièce
+			// dï¿½placement effectif de la piï¿½ce
 			this.implementor.movePiece(initCoord, targetCoord);
 			
-			// suppression éventuelle
+			// suppression ï¿½ventuelle
 			if (this.pieceToTakeCoord != null) {
 				tookPieceCoord = this.pieceToTakeCoord;
 				this.implementor.removePiece(this.pieceToTakeCoord);

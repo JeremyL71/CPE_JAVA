@@ -8,13 +8,25 @@ import java.util.List;
 import atelier3IRC2.checkersGameNutsAndBolts.PieceSquareColor;
 
 
-public class PawnModel extends AbstractPieceModel {
+public class PawnModel extends AbstractPieceModel implements Promotable {
 
 	public PawnModel(Coord coord, PieceSquareColor pieceColor) {
 		super();
 		this.coord = coord;
 		this.pieceColor = pieceColor;
 		this.direction = PieceSquareColor.BLACK.equals(this.getPieceColor()) ? -1 : 1;
+	}
+
+	@Override
+	public boolean isPromotable(){
+		boolean ispromotable = false;
+		if (PieceSquareColor.BLACK.equals(this.getPieceColor()) && this.getCoord().getLigne()==1){
+			ispromotable =  true;
+		}
+		else if (PieceSquareColor.WHITE.equals(this.getPieceColor()) && this.getCoord().getLigne()==10){
+			ispromotable = true;
+		}
+		return ispromotable;
 	}
 
 	@Override

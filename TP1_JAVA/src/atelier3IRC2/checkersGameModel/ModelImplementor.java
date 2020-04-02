@@ -68,6 +68,12 @@ public class ModelImplementor {
 		PieceModel initPiece = this.findPiece(initCoord);
 		if (initPiece != null) {
 			initPiece.move(targetCoord) ;
+			if (initPiece instanceof PawnModel) {
+				if (((PawnModel)initPiece).isPromotable()){
+					pieces.add(new QueenModel(targetCoord, PieceSquareColor.initPiece.getPieceColor()));
+					pieces.remove(initPiece);
+				}
+			}
 			isMovePieceDone = true;
 		}
 		return isMovePieceDone;

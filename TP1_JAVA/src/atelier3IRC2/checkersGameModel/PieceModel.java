@@ -15,7 +15,7 @@ public interface PieceModel {
 	
 	/**
 	 * @param coord the coord to set
-	 * le déplacement d'une pièce change ses coordonnées
+	 * le dï¿½placement d'une piï¿½ce change ses coordonnï¿½es
 	 */
 	public void move(Coord coord);
 
@@ -29,16 +29,14 @@ public interface PieceModel {
 	/**
 	 * @param targetCoord
 	 * @param isPieceToTake
-	 * @return true si le déplacement est légal
+	 * @return true si le dï¿½placement est lï¿½gal
 	 */
 	public boolean isMoveOk(Coord targetCoord, boolean isPieceToTake);
 
 	/**
 	 * @param targetCoord
-	 * @return liste des coordonnées des cases traversées par itinéraire de déplacement
+	 * @return liste des coordonnï¿½es des cases traversï¿½es par itinï¿½raire de dï¿½placement
 	 */
 	public List<Coord> getCoordsOnItinerary(Coord targetCoord);
-	
-
 }
 
