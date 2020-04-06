@@ -26,8 +26,8 @@ public class QueenModel extends AbstractPieceModel implements PieceModel {
 			int colDistance = targetCoord.getColonne() - this.getCoord().getColonne();
 			int ligDistance = targetCoord.getLigne() - this.getCoord().getLigne();
 			// Cas d'un d�placement en diagonale
-			if (Math.abs(colDistance) == Math.abs(ligDistance)){
-				ret = true;
+			if (Math.abs(colDistance) == Math.abs(ligDistance)) {
+					ret = true;
 			}
 			return ret;
 	}

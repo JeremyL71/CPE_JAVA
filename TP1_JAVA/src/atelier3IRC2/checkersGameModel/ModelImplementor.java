@@ -56,7 +56,7 @@ public class ModelImplementor {
 		boolean isMovePieceOk = false;
 		PieceModel initPiece = this.findPiece(initCoord);
 		if (initPiece != null) {
-			isMovePieceOk = initPiece.isMoveOk(targetCoord, isPieceToTake ) ;
+			isMovePieceOk = initPiece.isMoveOk(targetCoord, isPieceToTake) ;
 		}
 		return isMovePieceOk;
 	}
@@ -70,7 +70,7 @@ public class ModelImplementor {
 			initPiece.move(targetCoord) ;
 			if (initPiece instanceof PawnModel) {
 				if (((PawnModel)initPiece).isPromotable()){
-					pieces.add(new QueenModel(targetCoord, PieceSquareColor.initPiece.getPieceColor()));
+					pieces.add(new QueenModel(targetCoord, initPiece.getPieceColor()));
 					pieces.remove(initPiece);
 				}
 			}
