@@ -60,8 +60,10 @@ public class Controller {
 	 * @return index de l'�ventuelle pi�ce � capturer, -1 sinon
 	 * invite le model � effectuer le d�placement m�tier
 	 */
-	public int movePiece(int initSquareIndex, int targetSquareIndex) {
+	public int[] movePiece(int initSquareIndex, int targetSquareIndex) {
 		int tookPieceIndex = -1;
+		int isPromote = 0;
+
 		Coord tookPieceCoord = null ;
 		Coord initCoord = this.transformIndexToCoord(initSquareIndex);
 		Coord targetCoord = this.transformIndexToCoord(targetSquareIndex);
@@ -71,7 +73,16 @@ public class Controller {
 		if (tookPieceCoord != null) {
 			tookPieceIndex = transformCoordToIndex(tookPieceCoord);
 		}
-		return tookPieceIndex;
+
+		if (targetCoord.getLigne() == 0 || targetCoord.getLigne() == 10) {
+			isPromote = 1;
+		}
+
+		int[] ans = new int[2];
+		ans[0] = tookPieceIndex;
+		ans[1] = isPromote;
+
+		return ans;
 	}
 
 	/**

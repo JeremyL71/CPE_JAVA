@@ -23,10 +23,10 @@ class PieceGui extends Canvas {
 		this.setHeight(height/nbCol);		
 		this.setWidth(height/nbCol);
 
-		// la forme est définie par les valeurs par défaut de configuration
+		// la forme est dï¿½finie par les valeurs par dï¿½faut de configuration
 		this.shape = GuiConfig.SHAPE;
 
-		// la couleur est définie en dur
+		// la couleur est dï¿½finie en dur
 		Color color = Color.BLACK;
 		if (pieceColor == PieceSquareColor.WHITE) {
 			color = Color.WHITE;
@@ -38,7 +38,7 @@ class PieceGui extends Canvas {
 
 	private void draw () /**/ {
 
-		// calcul taille et position pièce en fonction du carré
+		// calcul taille et position piï¿½ce en fonction du carrï¿½
 		double rowWidth = this.getWidth();
 		double rowHeight = this.getHeight();
 		int offset = (int) ((rowWidth + rowHeight) / 6)   ;
@@ -67,6 +67,11 @@ class PieceGui extends Canvas {
 
 		}
 
+	}
+
+	public void promote() {
+		this.shape = GuiConfig.QUEENSHAPE;
+		this.draw();
 	}
 
 }

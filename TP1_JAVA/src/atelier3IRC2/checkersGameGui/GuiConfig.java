@@ -10,6 +10,9 @@ public class GuiConfig {
 	public final static PieceShape SHAPE = PieceShape.ARC;
 //	public final static PieceShape SHAPE = PieceShape.CIRCLE;
 //	public final static PieceShape SHAPE = PieceShape.SQUARE;
+//	public final static PieceShape QUEENSHAPE = PieceShape.ARC;
+	public final static PieceShape QUEENSHAPE = PieceShape.CIRCLE;
+//	public final static PieceShape QUEENSHAPE = PieceShape.SQUARE;
 	public final static int SIZE = 10;
 	public final static double HEIGHT = 600.0;
 	
